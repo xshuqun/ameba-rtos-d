@@ -2,6 +2,7 @@
 ![Realtek-logo](https://logos-download.com/wp-content/uploads/2016/05/Realtek_logo_logotype.png)
 
 * [中文版](./README_CN.md)
+* [Amazon FreeRTOS README](./README_Amazon.md)
 
 For any questions, please visit Realtek official website [RealMCU](https://www.realmcu.com/) to get more information.
 

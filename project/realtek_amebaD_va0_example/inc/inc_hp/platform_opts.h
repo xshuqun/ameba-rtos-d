@@ -69,6 +69,17 @@
 #define CONFIG_ENABLE_RDP		0
 
 /**
+* For Amazon FreeRTOS usage
+*/
+// OTA use
+#define AWS_OTA_IMAGE_STATE_FLASH_OFFSET     ( 0x001FB000 )
+// PKCS11 use
+#define pkcs11OBJECT_CERT_FLASH_OFFSET       ( 0x001FC000 ) //Flash location for CERT
+#define pkcs11OBJECT_PRIV_KEY_FLASH_OFFSET   ( 0x001FD000 ) //Flash location for Priv Key
+#define pkcs11OBJECT_PUB_KEY_FLASH_OFFSET    ( 0x001FE000 ) //Flash location for Pub Key
+#define pkcs11OBJECT_VERIFY_KEY_FLASH_OFFSET ( 0x001FF000 ) //Flash location for code verify Key
+
+/**
  * For Wlan configurations
  */
 #define CONFIG_WLAN	1
@@ -189,7 +200,7 @@
 #endif
 /******************End of iNIC configurations*******************/
 /* For Amazon FreeRTOS SDK example */
-#define CONFIG_EXAMPLE_AMAZON_FREERTOS   0
+#define CONFIG_EXAMPLE_AMAZON_FREERTOS   1
 
 /* For aj_basic_example */
 #define CONFIG_EXAMPLE_AJ_BASIC          0

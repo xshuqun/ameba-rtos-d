@@ -21,8 +21,7 @@ CSRC +=		$(DIR)/wifi_util.c \
 		$(DIR)/wifi_simple_config.c \
 		$(DIR)/rtw_wpa_supplicant/wpa_supplicant/wifi_eap_config.c \
 		$(DIR)/rtw_wpa_supplicant/wpa_supplicant/wifi_p2p_config.c \
-		$(DIR)/rtw_wpa_supplicant/wpa_supplicant/wifi_wps_config.c \
-		$(DIR)/rtw_wpa_supplicant/src/crypto/tls_polarssl.c
+		$(DIR)/rtw_wpa_supplicant/wpa_supplicant/wifi_wps_config.c
 
 #*****************************************************************************#
 #                               Object FILE LIST                              #

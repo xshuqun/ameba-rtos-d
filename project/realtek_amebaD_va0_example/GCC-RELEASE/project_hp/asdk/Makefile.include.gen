@@ -255,7 +255,7 @@ IFLAGS               += -I$(BASEDIR)/component/common/network/ssl/ssl_ram_map/ro
 
 #MBEDTLS
 ifeq ($(MBEDTLS_V_2_4_0_ENABLE), y)
-IFLAGS               += -I$(BASEDIR)/component/common/network/ssl/mbedtls-2.4.0/include
+#IFLAGS               += -I$(BASEDIR)/component/common/network/ssl/mbedtls-2.4.0/include
 else ifeq ($(MBEDTLS_V_3_4_0_ENABLE), y)
 IFLAGS               += -I$(BASEDIR)/component/common/network/ssl/mbedtls-3.4.0/include
 IFLAGS               += -I$(BASEDIR)/component/common/network/ssl/mbedtls-3.4.0/library
@@ -324,6 +324,67 @@ IFLAGS               += -I$(BASEDIR)/component/common/application/game_headset
 IFLAGS               += -I$(BASEDIR)/component/common/example/game_headset_dongle
 IFLAGS               += -I$(BASEDIR)/component/common/example/game_headset
 
+#amazon
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/common/http_demo_helpers
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/common/mqtt_demo_helpers
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/common/mqtt_subscription_manager
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/corePKCS11/source/dependency/3rdparty/pkcs11/published/2-40-errata-1
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/corePKCS11/source/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/common/pkcs11_helpers
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/device_defender_for_aws
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/dev_mode_key_provisioning/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/demos/network_manager
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/3rdparty/jsmn
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/3rdparty/mbedtls/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/3rdparty/mbedtls/include/mbedtls
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/3rdparty/mbedtls_config
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/3rdparty/mbedtls_utils
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/3rdparty/tinycbor/src
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/mqtt_agent/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/platform/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/platform/include/platform
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/platform/freertos/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/secure_sockets/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/transport/secure_sockets
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/abstractions/wifi/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/c_sdk/standard/common/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/c_sdk/standard/common/include/private
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/freertos_plus/standard/crypto/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/freertos_plus/standard/utils/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/freertos_plus/standard/tls/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/common/logging/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/backoffAlgorithm/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/coreHTTP/source/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/coreHTTP/source/interface
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/coreHTTP/source/dependency/3rdparty/llhttp/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/coreJSON/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/coreMQTT/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/coreMQTT-Agent/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/device_defender_for_aws/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/device_shadow_for_aws/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/jobs_for_aws/source/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/jobs_for_aws/source/otaJobParser/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/ota_for_aws/source/include
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/ota_for_aws/source
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/ota_for_aws/source/portable
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/ota_for_aws/source/portable/os
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/libraries/mqtt_file_streams_for_aws/source/include
+
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/ports/amebaD/config_files
+IFLAGS               += -I$(BASEDIR)/component/common/application/amazon/amazon-freertos/ports/amebaD/ota
 
 #*****************************************************************************#
 #                             ARM ASSEMBLER FLAGS
@@ -435,9 +496,11 @@ GLOBAL_CFLAGS += -DCONFIG_BT_MP
 GLOBAL_CFLAGS += -DCONFIG_MP_INCLUDED
 endif
 
-ifeq ($(CONFIG_MATTER_EN), y)
-include $(MATTER_INCLUDE)
-endif
+#ifeq ($(CONFIG_MATTER_EN), y)
+#include $(MATTER_INCLUDE)
+#endif
+
+GLOBAL_CFLAGS += -DMBEDTLS_CONFIG_FILE=\<aws_mbedtls_config.h\>
 
 #*****************************************************************************#
 #                           ARM LD FLAGS

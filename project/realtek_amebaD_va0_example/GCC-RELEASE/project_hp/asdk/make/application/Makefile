@@ -24,6 +24,7 @@ ifeq ($(CONFIG_MATTER_EN),y)
 endif
 	@make -C xmodem all
 	#@make -C game_headset all
+	@make -C amazon all
 	#@make -C airkiss all
 #*****************************************************************************#
 #              CLEAN GENERATED FILES                                          #
@@ -33,6 +34,7 @@ clean:
 	@make -C mqtt clean
 	@make -C xmodem clean
 	@make -C game_headset clean
+	@make -C amazon clean
 	#@make -C airkiss clean
 	@make -C linkkit clean
 ifeq ($(CONFIG_MATTER_EN),y)

@@ -435,6 +435,26 @@ Certain platform allows computing and verifying the IP, UDP, TCP and ICMP checks
 #endif
 #endif 
 
+
+/**
+* For Amazon FreeRTOS usage
+*/
+#define LWIP_COMPAT_MUTEX_ALLOWED
+#define ERRNO   1
+#define LWIP_SO_SNDTIMEO                1
+#define SYS_LIGHTWEIGHT_PROT    1
+#define SO_REUSE                        1
+#undef LWIP_TCPIP_CORE_LOCKING
+#undef LWIP_SOCKET_SET_ERRNO
+#undef LWIP_STATS
+#define LWIP_TCPIP_CORE_LOCKING         1
+#define LWIP_SOCKET_SET_ERRNO           1
+#define LWIP_STATS 1
+#define MIB2_STATS 1
+/**
+* For Amazon FreeRTOS usage end
+*/
+
 #include "lwip/init.h"                  //for version control
 
 #if defined(CONFIG_MATTER) && CONFIG_MATTER
